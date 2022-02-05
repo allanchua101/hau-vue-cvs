@@ -5,7 +5,7 @@ const resumes = [
     email: "allan.chua@hau.edu.com",
     skills: [
       {
-        name: "JavaScript",
+        name: "JS",
         icon: "mdi-language-javascript",
         color: "#d8c547",
       },
@@ -15,12 +15,12 @@ const resumes = [
         color: "#37475A",
       },
       {
-        name: "Vue JS",
+        name: "Vue",
         icon: "mdi-vuejs",
         color: "#41B883",
       },
       {
-        name: "React JS",
+        name: "React",
         icon: "mdi-react",
         color: "#61DBFB",
       },
@@ -35,7 +35,7 @@ const resumes = [
     email: "gabrielle.valencia@hau.edu.com",
     skills: [
       {
-        name: "JavaScript",
+        name: "JS",
         icon: "mdi-language-javascript",
         color: "#d8c547",
       },
@@ -50,7 +50,7 @@ const resumes = [
         color: "#264de4",
       },
       {
-        name: "Vue JS",
+        name: "Vue",
         icon: "mdi-vuejs",
         color: "#41B883",
       },

@@ -15,20 +15,21 @@
       <v-card-text>
         <!-- Email -->
         <v-spacer class="mt-2"></v-spacer>
-        <v-icon class="mr-2 hau hau-contact-icon" medium>mdi-email</v-icon>
-        <a :href="`mailto:${email}`" class="hau hau-contact">{{ email }}</a>
+        <a :href="`mailto:${email}`" class="hau hau-contact">
+          <strong>Email:</strong> {{ email }}
+        </a>
         <!-- Phone -->
         <v-spacer class="mt-2"></v-spacer>
-        <v-icon class="mr-2 hau hau-contact-icon" medium>mdi-phone</v-icon>
-        <a :href="`tell:${phone}`" class="hau hau-contact">{{ phone }}</a>
+        <a :href="`tell:${phone}`" class="hau hau-contact">
+          <strong>Phone:</strong> {{ phone }}
+        </a>
         <v-spacer class="mt-8"></v-spacer>
         <!-- Chips -->
         <v-chip
           class="mr-1"
           v-for="skill in skills"
           :key="skill.name"
-          dark
-          :color="skill.color"
+          outlined
           label
         >
           <v-icon class="mr-1">{{ skill.icon }}</v-icon>
@@ -93,9 +94,9 @@ export default {
 
 .hau.hau-contact {
   font-size: 16px;
-  color: #0174f0;
+  color: #202024;
 }
 .hau.hau-contact-icon {
-  color: #0174f0 !important;
+  color: #202024 !important;
 }
 </style>
