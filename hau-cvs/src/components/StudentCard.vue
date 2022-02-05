@@ -4,6 +4,7 @@
       <v-img
         class="white--text align-end"
         :src="backgroundUrl"
+        gradient="to top right, rgba(00,00,00,.33), rgba(00,00,00,.7)"
         max-height="242px"
       ></v-img>
       <!-- Card header -->
@@ -37,7 +38,7 @@
       <!-- Card button -->
       <v-card-actions>
         <v-spacer></v-spacer>
-        <v-btn color="black" elevation="0" text>
+        <v-btn color="black" elevation="0" text @click="() => onViewResume(id)">
           <v-icon class="mr-1">mdi-arrow-right</v-icon>
           View CV
         </v-btn>
@@ -49,6 +50,10 @@
 <script>
 export default {
   props: {
+    id: {
+      type: Number,
+      required: true,
+    },
     studentName: {
       type: String,
       required: true,
@@ -68,6 +73,13 @@ export default {
     backgroundUrl: {
       type: String,
       required: true,
+    },
+  },
+  methods: {
+    onViewResume(id) {
+      this.$router.push({
+        path: `/resume/?id=${id}`,
+      });
     },
   },
 };
