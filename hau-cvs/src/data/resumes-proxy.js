@@ -1,8 +1,13 @@
 const resumes = [
+  // Allan
   {
     id: 1,
     name: "Chua, Allan Angeles",
+    firstName: "Allan",
+    lastName: "Chua",
     email: "allan.chua@hau.edu.com",
+    birthDay: "1990-01-20",
+    address: "1178 Del Pilar Street, Cabanatuan Nueva Ecija",
     skills: [
       {
         name: "JS",
@@ -29,10 +34,15 @@ const resumes = [
       "https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     phone: "098-123-4567",
   },
+  // Gabrielle
   {
     id: 2,
     name: "Valencia, Gabrielle",
+    firstName: "Gabrielle",
+    lastName: "Valencia",
     email: "gabrielle.valencia@hau.edu.com",
+    birthDay: "1992-06-12",
+    address: "168 Maysan Road,, Metro Manila NCR",
     skills: [
       {
         name: "JS",

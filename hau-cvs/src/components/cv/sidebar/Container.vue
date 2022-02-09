@@ -4,13 +4,16 @@
       <avatar />
       <div class="text-sm-center mb-4 mt-3">
         <h1>
-          Gabrielle
-          <span class="light-blue--text text--lighten-3"> Valencia</span>
+          {{ studentData.firstName }}
+          <span class="light-blue--text text--lighten-3">
+            {{ studentData.lastName }}
+          </span>
         </h1>
       </div>
 
-      <sidebar-section :options="sections.info" />
-      <sidebar-section :options="sections.socials" />
+      <sidebar-section :options="infoSection" />
+      <!-- 
+      <sidebar-section :options="socialsSection" />
       <sidebar-section :options="sections.hobbies">
         <template v-slot:item="{ item }">
           <v-chip>
@@ -44,7 +47,7 @@
             </v-layout>
           </v-container>
         </template>
-      </sidebar-section>
+      </sidebar-section> -->
     </v-card-text>
   </v-card>
 </template>
@@ -54,100 +57,112 @@ import Avatar from "../sidebar/Avatar";
 import SidebarSection from "../sidebar/Section";
 export default {
   name: "Sidebar",
+  props: {
+    studentData: {
+      type: Object,
+      required: true,
+    },
+  },
   components: { SidebarSection, Avatar },
   data() {
     return {
-      sections: {
-        info: {
-          title: "INFO",
-          items: [
-            {
-              name: "Email",
-              icon: "mdi-email",
-              text: "gabrielle.valencia@hau.edu.ph",
-            },
-
-            {
-              name: "Birth Date",
-              icon: "mdi-cake-variant",
-              text: "Jan 29, 1998",
-            },
-            {
-              name: "Address",
-              icon: "mdi-map-marker",
-              text: "Porac, Pampanga",
-            },
-          ],
-        },
-        socials: {
-          title: "SOCIALS",
-          items: [
-            {
-              icon: "mdi-github-circle",
-              text: "github.com/GabrielleValencia",
-              link: "https://github.com/Bogs29",
-            },
-            {
-              icon: "mdi-linkedin-box",
-              text: "linkedin.com/in/GabrielleValencia",
-              link: "https://www.linkedin.com/in/gabrielle-louis-d-valencia-695479203/",
-            },
-            {
-              icon: "mdi-twitter",
-              text: "twitter.com/GabrielleValencia",
-              link: "https://twitter.com/gabvalencia29",
-            },
-          ],
-        },
-        hobbies: {
-          title: "HOBBIES",
-          items: [
-            {
-              icon: "mdi-bullseye",
-              text: "Getting out of Safe Zone",
-            },
-            {
-              icon: "mdi-biohazard",
-              text: "Challenges",
-            },
-            {
-              icon: "mdi-bike",
-              text: "Cycling",
-            },
-            {
-              icon: "mdi-image-filter-hdr",
-              text: "Nature",
-            },
-            {
-              icon: "mdi-basketball",
-              text: "Sports",
-            },
-            {
-              icon: "mdi-music",
-              text: "Music",
-            },
-
-            {
-              icon: "mdi-book-open-page-variant",
-              text: "Books",
-            },
-          ],
-        },
-        languages: {
-          title: "LANGUAGES",
-          items: [
-            {
-              text: "English",
-              value: 70,
-            },
-            {
-              text: "Filipino",
-              value: 100,
-            },
-          ],
-        },
-      },
+      // sections: {
+      //   socials: {
+      //     title: "SOCIALS",
+      //     items: [
+      //       {
+      //         icon: "mdi-github-circle",
+      //         text: "github.com/GabrielleValencia",
+      //         link: "https://github.com/Bogs29",
+      //       },
+      //       {
+      //         icon: "mdi-linkedin-box",
+      //         text: "linkedin.com/in/GabrielleValencia",
+      //         link: "https://www.linkedin.com/in/gabrielle-louis-d-valencia-695479203/",
+      //       },
+      //       {
+      //         icon: "mdi-twitter",
+      //         text: "twitter.com/GabrielleValencia",
+      //         link: "https://twitter.com/gabvalencia29",
+      //       },
+      //     ],
+      //   },
+      //   hobbies: {
+      //     title: "HOBBIES",
+      //     items: [
+      //       {
+      //         icon: "mdi-bullseye",
+      //         text: "Getting out of Safe Zone",
+      //       },
+      //       {
+      //         icon: "mdi-biohazard",
+      //         text: "Challenges",
+      //       },
+      //       {
+      //         icon: "mdi-bike",
+      //         text: "Cycling",
+      //       },
+      //       {
+      //         icon: "mdi-image-filter-hdr",
+      //         text: "Nature",
+      //       },
+      //       {
+      //         icon: "mdi-basketball",
+      //         text: "Sports",
+      //       },
+      //       {
+      //         icon: "mdi-music",
+      //         text: "Music",
+      //       },
+      //       {
+      //         icon: "mdi-book-open-page-variant",
+      //         text: "Books",
+      //       },
+      //     ],
+      //   },
+      //   languages: {
+      //     title: "LANGUAGES",
+      //     items: [
+      //       {
+      //         text: "English",
+      //         value: 70,
+      //       },
+      //       {
+      //         text: "Filipino",
+      //         value: 100,
+      //       },
+      //     ],
+      //   },
+      // },
     };
+  },
+  computed: {
+    infoSection() {
+      let output = {
+        title: "INFO",
+        items: [],
+      };
+
+      output.items.push({
+        name: "Email",
+        icon: "mdi-email",
+        text: this.studentData.email,
+      });
+
+      output.items.push({
+        name: "Birth Date",
+        icon: "mdi-cake-variant",
+        text: this.studentData.birthDay,
+      });
+
+      output.items.push({
+        name: "Address",
+        icon: "mdi-map-marker",
+        text: this.studentData.address,
+      });
+
+      return output;
+    },
   },
 };
 </script>

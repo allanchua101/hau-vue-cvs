@@ -1,19 +1,13 @@
 <template>
   <v-container fluid fill-height>
-    <v-layout align-center justify-center>
+    <v-layout align-center justify-center class="hau hau-resume-wrapper">
       <v-flex md10 sm12>
         <v-layout v-if="studentData" wrap>
           <v-flex md4>
-            <sidebar-container
-              :student-data="studentData"
-              class="fill-height"
-            />
+            <sidebar-container :studentData="studentData" class="fill-height" />
           </v-flex>
           <v-flex md8>
-            <content-container
-              :student-data="studentData"
-              class="fill-height"
-            />
+            <content-container :studentData="studentData" class="fill-height" />
           </v-flex>
         </v-layout>
       </v-flex>
@@ -58,8 +52,8 @@ export default {
 </script>
 
 <style>
-.hau.hau-resume-page {
-  max-width: 720px;
+.hau.hau-resume-wrapper {
+  max-width: 1024px;
   margin: auto;
 }
 </style>
