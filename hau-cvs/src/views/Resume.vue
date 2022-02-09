@@ -1,15 +1,30 @@
 <template>
-  <v-container class="hau hau-resume-page">
-    <v-row>
-      <v-col cols="12" class="text-center">
-        <h1 class="hau hau-title">{{ studentName }}</h1>
-      </v-col>
-    </v-row>
+  <v-container fluid fill-height>
+    <v-layout align-center justify-center>
+      <v-flex md10 sm12>
+        <v-layout v-if="studentData" wrap>
+          <v-flex md4>
+            <sidebar-container
+              :student-data="studentData"
+              class="fill-height"
+            />
+          </v-flex>
+          <v-flex md8>
+            <content-container
+              :student-data="studentData"
+              class="fill-height"
+            />
+          </v-flex>
+        </v-layout>
+      </v-flex>
+    </v-layout>
   </v-container>
 </template>
 
 <script>
 import { getResumeByID } from "../data/resumes-proxy";
+import SidebarContainer from "../components/cv/sidebar/Container";
+import ContentContainer from "../components/cv/content/Container";
 
 function getParameterByName(name, url = window.location.href) {
   name = name.replace(/[\\[\]]/g, "\\$&");
@@ -21,10 +36,15 @@ function getParameterByName(name, url = window.location.href) {
 }
 
 export default {
+  components: {
+    SidebarContainer,
+    ContentContainer,
+  },
   data: () => {
     return {
       id: 0,
       studentName: "",
+      studentData: null,
     };
   },
   mounted() {
@@ -32,8 +52,7 @@ export default {
 
     const student = getResumeByID(this.id);
 
-    this.studentName = student.name;
-    // TODO: Gab add properties
+    this.studentData = student;
   },
 };
 </script>
