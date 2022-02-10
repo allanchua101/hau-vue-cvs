@@ -8,6 +8,10 @@ const resumes = [
     email: "allan.chua@hau.edu.com",
     birthDay: "1990-01-20",
     address: "1178 Del Pilar Street, Cabanatuan Nueva Ecija",
+    github: "",
+    linkedin:"",
+    twitter:"",
+
     skills: [
       {
         name: "JS",
@@ -43,6 +47,17 @@ const resumes = [
     email: "gabrielle.valencia@hau.edu.com",
     birthDay: "1992-06-12",
     address: "168 Maysan Road,, Metro Manila NCR",
+    github: "github.com/GabrielleValencia",
+    linkedin:  "linkedin.com/in/GabrielleValencia",
+    twitter: "https://twitter.com/gabvalencia",
+    Getting: "Getting out of Safe Zone",
+    Challenges: "Challenges",
+    Cycling: "Cycling",
+    nature: "Nature",
+    sports: "Basketball",
+    music: "Music",
+    english: "English",
+    filipino: "Filipino",
     skills: [
       {
         name: "JS",

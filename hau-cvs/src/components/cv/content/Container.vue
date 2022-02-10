@@ -1,5 +1,6 @@
 <template>
-  <v-card color="grey lighten-4" light>
+
+ <v-card color="grey lighten-4" light>
     <v-card-text>
       <content-section title="Objectives">
         To secure a position in the organization that offers challenge and
@@ -149,7 +150,7 @@ export default {
     ],
   }),
 };
-</script>
+</script> --!>
 
 <style scoped>
 .title {
