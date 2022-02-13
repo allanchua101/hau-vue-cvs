@@ -13,8 +13,7 @@
 
       <sidebar-section :options="infoSection" />
       <sidebar-section :options="socialsSection" />
-      <sidebar-section :options="hobbiesSection" />
-
+      <!-- <sidebar-section :options="hobbiesSection" /> -->
 
       <!-- 
       <sidebar-section :options="socialsSection" />
@@ -52,8 +51,6 @@
           </v-container>
         </template>
       </sidebar-section> -->
-
-      
     </v-card-text>
   </v-card>
 </template>
@@ -167,87 +164,34 @@ export default {
         text: this.studentData.address,
       });
 
-    
-  
-    
-        output.items.push({
-        name: "github",
-        icon: "mdi-github-circle",
-        text: this.studentData.github,
-        
+      return output;
+    },
+    socialsSection() {
+      let output = {
+        title: "SOCIALS",
+        items: [],
+      };
+
+      output.items.push({
+        name: "Github",
+        icon: "mdi-github",
+        text: this.studentData.githubText,
+        link: this.studentData.github,
       });
 
-       output.items.push({
-        name: "linkedin",
-        icon: "mdi-linkedin-box",
-        text: this.studentData.linkedin,
-        
+      output.items.push({
+        name: "LinkedIn",
+        icon: "mdi-linkedin",
+        text: this.studentData.linkedinText,
+        link: this.studentData.linkedin,
       });
 
-
-       output.items.push({
-        name: "twitter",
+      output.items.push({
+        name: "Twitter",
         icon: "mdi-twitter",
-        text: this.studentData.twitter,
-        
+        text: this.studentData.twitterText,
+        link: this.studentData.twitter,
       });
-
-      
-       output.items.push({
-        icon: "mdi-bullseye",
-        text: this.studentData.Getting,
-        
-      });
-
-      output.items.push({
-        icon: "mdi-biohazard",
-        text: this.studentData.Challenges,
-        
-      });
-
-      output.items.push({
-        icon: "mdi-bike",
-        text: this.studentData.Cycling,
-        
-      });
-
-        output.items.push({
-        icon: "mdi-image-filter-hdr",
-        text: this.studentData.nature,
-        
-      });
-
-        output.items.push({
-        icon: "mdi-basketball",
-        text: this.studentData.sports,
-        
-      });
-
-        output.items.push({
-        icon: "mdi-music",
-        text: this.studentData.music,
-        
-      });
-
-        output.items.push({
-        text: this.studentData.english,
-        
-        
-      });
-
-        output.items.push({
-         text: this.studentData.filipino,
-        
-        
-      });
-
-
-
-
-
-
-
-
 
       return output;
     },

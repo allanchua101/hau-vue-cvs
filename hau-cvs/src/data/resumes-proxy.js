@@ -8,9 +8,13 @@ const resumes = [
     email: "allan.chua@hau.edu.com",
     birthDay: "1990-01-20",
     address: "1178 Del Pilar Street, Cabanatuan Nueva Ecija",
-    github: "",
-    linkedin:"",
-    twitter:"",
+    github: "https://www.github.com/allanchua101",
+    githubText: "github.com/allanchua101",
+    linkedin: "https://www.linkedin.com/in/allan-chua-467402103/",
+    linkedinText: "linkedin.com/in/allan-chua-467402103/",
+    twitter: "https://www.twitter.com/ac052790",
+    twitterText: "twitter.com/ac052790",
+    objectives: `I am a software engineer with experience in developing web applications, cloud platforms, AI applications and mobile apps. I am proficient in multiple programming languages, including JavaScript, Python, C#, Java and Go. I am also familiar with various software development methodologies and tools.`,
 
     skills: [
       {
@@ -47,9 +51,16 @@ const resumes = [
     email: "gabrielle.valencia@hau.edu.com",
     birthDay: "1992-06-12",
     address: "168 Maysan Road,, Metro Manila NCR",
-    github: "github.com/GabrielleValencia",
-    linkedin:  "linkedin.com/in/GabrielleValencia",
-    twitter: "https://twitter.com/gabvalencia",
+
+    github: "https://www.github.com/Bogs29",
+    githubText: "github.com/Bogs29",
+    linkedin:
+      "https://www.linkedin.com/in/gabrielle-louis-d-valencia-250358210/",
+    linkedinText: "linkedin.com/in/gabrielle-louis-d-valencia-250358210/",
+    twitter: "https://www.twitter.com/gabvalencia29",
+    twitterText: "twitter.com/gabvalencia29",
+    objectives: `To secure a position in the organization that offers challenge and opportunity for my career development and at the same time to serve the organization to the best of my capabilities.`,
+
     Getting: "Getting out of Safe Zone",
     Challenges: "Challenges",
     Cycling: "Cycling",

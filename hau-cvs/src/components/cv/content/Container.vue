@@ -1,11 +1,8 @@
 <template>
-
- <v-card color="grey lighten-4" light>
+  <v-card color="grey lighten-4" light>
     <v-card-text>
       <content-section title="Objectives">
-        To secure a position in the organization that offers challenge and
-        opportunity for my career development and at the same time to serve the
-        organization to the best of my capabilities.
+        {{ studentData.objectives }}
       </content-section>
 
       <content-section v-if="educations" title="Education">
@@ -98,6 +95,12 @@ import ContentSection from "../content/Section";
 export default {
   name: "MainContent",
   components: { ContentSection },
+  props: {
+    studentData: {
+      type: Object,
+      required: true,
+    },
+  },
   data: () => ({
     educations: [
       {
@@ -150,7 +153,8 @@ export default {
     ],
   }),
 };
-</script> --!>
+</script>
+--!>
 
 <style scoped>
 .title {
