@@ -70,18 +70,6 @@ export default {
         text: this.studentData.email,
       });
 
-      output.items.push({
-        name: "Birth Date",
-        icon: "mdi-cake-variant",
-        text: this.studentData.birthDay,
-      });
-
-      output.items.push({
-        name: "Address",
-        icon: "mdi-map-marker",
-        text: this.studentData.address,
-      });
-
       return output;
     },
     socialsSection() {

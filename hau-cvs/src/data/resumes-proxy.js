@@ -6,8 +6,6 @@ const resumes = [
     firstName: "Allan",
     lastName: "Chua",
     email: "allan.chua@hau.edu.com",
-    birthDay: "1990-01-20",
-    address: "1178 Del Pilar Street, Cabanatuan Nueva Ecija",
 
     github: "https://www.github.com/allanchua101",
     linkedin: "https://www.linkedin.com/in/allan-chua-467402103/",
@@ -156,8 +154,6 @@ const resumes = [
     firstName: "Gabrielle",
     lastName: "Valencia",
     email: "gabrielle.valencia@hau.edu.com",
-    birthDay: "1992-06-12",
-    address: "168 Maysan Road,, Metro Manila NCR",
 
     github: "https://www.github.com/Bogs29",
     linkedin:
