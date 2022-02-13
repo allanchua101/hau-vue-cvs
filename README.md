@@ -10,7 +10,7 @@ HAU CVs is a VueJS-based web application used for presenting student resumes in 
 - VueJS for template rendering
 - Vuetify for UI framework
 - Vue Router for SPA routing capabilities.
-- JavaScript as core language
+- JavaScript as base programming language
 
 ### Pre-requisites
 
