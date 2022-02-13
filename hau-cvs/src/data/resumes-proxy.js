@@ -16,6 +16,37 @@ const resumes = [
     twitterText: "twitter.com/ac052790",
     objectives: `I am a software engineer with experience in developing web applications, cloud platforms, AI applications and mobile apps. I am proficient in multiple programming languages, including JavaScript, Python, C#, Java and Go. I am also familiar with various software development methodologies and tools.`,
 
+    hobbies: [
+      {
+        icon: "mdi-soccer",
+        text: "Football",
+      },
+      {
+        icon: "mdi-kayaking",
+        text: "Kayak",
+      },
+      {
+        icon: "mdi-bike",
+        text: "Beach-side Biking",
+      },
+      {
+        icon: "mdi-badminton",
+        text: "Badminton",
+      },
+      {
+        icon: "mdi-table-tennis",
+        text: "Table Tennis",
+      },
+      {
+        icon: "mdi-basketball",
+        text: "Basketball",
+      },
+      {
+        icon: "mdi-youtube-gaming",
+        text: "Dota 2",
+      },
+    ],
+
     skills: [
       {
         name: "JS",
@@ -60,6 +91,37 @@ const resumes = [
     twitter: "https://www.twitter.com/gabvalencia29",
     twitterText: "twitter.com/gabvalencia29",
     objectives: `To secure a position in the organization that offers challenge and opportunity for my career development and at the same time to serve the organization to the best of my capabilities.`,
+
+    hobbies: [
+      {
+        icon: "mdi-bullseye",
+        text: "Getting out of Safe Zone",
+      },
+      {
+        icon: "mdi-biohazard",
+        text: "Challenges",
+      },
+      {
+        icon: "mdi-bike",
+        text: "Cycling",
+      },
+      {
+        icon: "mdi-image-filter-hdr",
+        text: "Nature",
+      },
+      {
+        icon: "mdi-basketball",
+        text: "Sports",
+      },
+      {
+        icon: "mdi-music",
+        text: "Music",
+      },
+      {
+        icon: "mdi-book-open-page-variant",
+        text: "Books",
+      },
+    ],
 
     Getting: "Getting out of Safe Zone",
     Challenges: "Challenges",

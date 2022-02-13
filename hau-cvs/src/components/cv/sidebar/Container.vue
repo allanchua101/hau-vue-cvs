@@ -13,14 +13,10 @@
 
       <sidebar-section :options="infoSection" />
       <sidebar-section :options="socialsSection" />
-      <!-- <sidebar-section :options="hobbiesSection" /> -->
-
-      <!-- 
-      <sidebar-section :options="socialsSection" />
-      <sidebar-section :options="sections.hobbies">
+      <sidebar-section :options="hobbiesSection">
         <template v-slot:item="{ item }">
-          <v-chip>
-            <v-avatar>
+          <v-chip class="mr-1 mb-1">
+            <v-avatar class="mr-1">
               <v-icon>
                 {{ item.icon }}
               </v-icon>
@@ -29,6 +25,8 @@
           </v-chip>
         </template>
       </sidebar-section>
+
+      <!-- 
       <sidebar-section :options="sections.languages">
         <template v-slot:items="{ items }">
           <v-container pa-0>
@@ -68,76 +66,7 @@ export default {
   },
   components: { SidebarSection, Avatar },
   data() {
-    return {
-      // sections: {
-      //   socials: {
-      //     title: "SOCIALS",
-      //     items: [
-      //       {
-      //         icon: "mdi-github-circle",
-      //         text: "github.com/GabrielleValencia",
-      //         link: "https://github.com/Bogs29",
-      //       },
-      //       {
-      //         icon: "mdi-linkedin-box",
-      //         text: "linkedin.com/in/GabrielleValencia",
-      //         link: "https://www.linkedin.com/in/gabrielle-louis-d-valencia-695479203/",
-      //       },
-      //       {
-      //         icon: "mdi-twitter",
-      //         text: "twitter.com/GabrielleValencia",
-      //         link: "https://twitter.com/gabvalencia29",
-      //       },
-      //     ],
-      //   },
-      //   hobbies: {
-      //     title: "HOBBIES",
-      //     items: [
-      //       {
-      //         icon: "mdi-bullseye",
-      //         text: "Getting out of Safe Zone",
-      //       },
-      //       {
-      //         icon: "mdi-biohazard",
-      //         text: "Challenges",
-      //       },
-      //       {
-      //         icon: "mdi-bike",
-      //         text: "Cycling",
-      //       },
-      //       {
-      //         icon: "mdi-image-filter-hdr",
-      //         text: "Nature",
-      //       },
-      //       {
-      //         icon: "mdi-basketball",
-      //         text: "Sports",
-      //       },
-      //       {
-      //         icon: "mdi-music",
-      //         text: "Music",
-      //       },
-      //       {
-      //         icon: "mdi-book-open-page-variant",
-      //         text: "Books",
-      //       },
-      //     ],
-      //   },
-      //   languages: {
-      //     title: "LANGUAGES",
-      //     items: [
-      //       {
-      //         text: "English",
-      //         value: 70,
-      //       },
-      //       {
-      //         text: "Filipino",
-      //         value: 100,
-      //       },
-      //     ],
-      //   },
-      // },
-    };
+    return {};
   },
   computed: {
     infoSection() {
@@ -192,6 +121,22 @@ export default {
         text: this.studentData.twitterText,
         link: this.studentData.twitter,
       });
+
+      return output;
+    },
+    hobbiesSection() {
+      let output = {
+        title: "HOBBIES",
+        items: [],
+      };
+
+      if (
+        this.studentData &&
+        this.studentData.hobbies &&
+        this.studentData.hobbies.length > 0
+      ) {
+        output.items.push(...this.studentData.hobbies);
+      }
 
       return output;
     },
