@@ -27,7 +27,7 @@
         <!-- Chips -->
         <v-chip
           class="mr-1"
-          v-for="skill in skills"
+          v-for="skill in topSkills"
           :key="skill.name"
           outlined
           label
@@ -81,6 +81,17 @@ export default {
       this.$router.push({
         path: `/resume/?id=${id}`,
       });
+    },
+  },
+  computed: {
+    topSkills() {
+      let temp = JSON.parse(JSON.stringify(this.skills));
+
+      return temp
+        .sort((a, b) => {
+          return a.value > b.value ? -1 : 1;
+        })
+        .slice(0, 4);
     },
   },
 };

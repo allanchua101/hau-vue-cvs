@@ -93,22 +93,29 @@ export default {
       output.items.push({
         name: "Github",
         icon: "mdi-github",
-        text: this.studentData.githubText,
+        text: "View in Github",
         link: this.studentData.github,
       });
 
       output.items.push({
         name: "LinkedIn",
         icon: "mdi-linkedin",
-        text: this.studentData.linkedinText,
+        text: "View in LinkedIn",
         link: this.studentData.linkedin,
       });
 
       output.items.push({
         name: "Twitter",
         icon: "mdi-twitter",
-        text: this.studentData.twitterText,
+        text: "View in Twitter",
         link: this.studentData.twitter,
+      });
+
+      output.items.push({
+        name: "Stack Overflow",
+        icon: "mdi-stack-overflow",
+        text: "View in Stack Overflow",
+        link: this.studentData.stackOverflow,
       });
 
       return output;
