@@ -46,6 +46,17 @@ const resumes = [
         text: "Dota 2",
       },
     ],
+    languages: [
+      {
+        text: "English",
+      },
+      {
+        text: "Kampangpangan",
+      },
+      {
+        text: "Tagalog",
+      },
+    ],
 
     skills: [
       {
@@ -120,6 +131,18 @@ const resumes = [
       {
         icon: "mdi-book-open-page-variant",
         text: "Books",
+      },
+    ],
+
+    languages: [
+      {
+        text: "English",
+      },
+      {
+        text: "Kampangpangan",
+      },
+      {
+        text: "Tagalog",
       },
     ],
 
