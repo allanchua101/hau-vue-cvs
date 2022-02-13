@@ -4,7 +4,6 @@
       <content-section title="Objectives">
         {{ studentData.objectives }}
       </content-section>
-
       <content-section v-if="educations" title="Education">
         <v-layout v-for="(education, i) in educations" :key="i">
           <v-flex md4> {{ education.from }} - {{ education.to }} </v-flex>
@@ -72,7 +71,6 @@
           </v-flex>
         </v-layout>
       </content-section>
-
       <content-section>
         <i
           >"I hereby Certify that the above Information is true and correct to
@@ -92,6 +90,7 @@
 
 <script>
 import ContentSection from "../content/Section";
+
 export default {
   name: "MainContent",
   components: { ContentSection },
@@ -154,7 +153,6 @@ export default {
   }),
 };
 </script>
---!>
 
 <style scoped>
 .title {
