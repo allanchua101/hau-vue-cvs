@@ -4,6 +4,7 @@
 
 HAU CVs is a VueJS-based web application used for presenting student resumes in a single page application setup.
 
+[Live POC Website](https://allanchua101.github.io/hau-vue-cvs/#/)
 
 ### Technology Stack
 
